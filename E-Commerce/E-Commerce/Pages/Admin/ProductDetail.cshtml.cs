@@ -76,10 +76,10 @@ namespace E_Commerce.Pages.Admin
             {
                 var filePath = Path.GetTempFileName();
 
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await _blob.Image.CopyToAsync(stream);
-                };
+                //using (var stream = new FileStream(filePath, FileMode.Create))
+                //{
+                //    await _blob.Image.CopyToAsync(stream);
+                //};
 
                 var container = await _blob.GetContainer("products");
 

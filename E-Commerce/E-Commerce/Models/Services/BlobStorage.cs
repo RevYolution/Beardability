@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Models.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
@@ -14,7 +15,9 @@ namespace E_Commerce.Models.Services
         public IConfiguration Configuration { get; }
         public CloudStorageAccount CloudStorage { get; set; }
         public CloudBlobClient CloudBlob { get; set; }
-        
+        public IFormFile Image { get; set; }
+
+
         public BlobStorage(IConfiguration configuration)
         {
             Configuration = configuration;
